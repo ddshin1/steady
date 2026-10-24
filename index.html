@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Steady: small daily steps, planned around how you feel." />
+    <meta name="theme-color" content="#2F6B4F" />
+    <title>Steady</title>
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <script type="module" crossorigin src="./assets/index-DgA9ws6S.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Cb1cfk6P.css">
+  </head>
+  <body>
+    <main class="phone">
+      <header class="top">
+        <div class="brand">
+          <button
+            class="icon-btn menu-btn"
+            data-action="open-drawer"
+            aria-label="Open menu"
+            aria-controls="drawer-panel"
+            aria-expanded="false"
+          >
+            <span data-icon="menu" data-size="22"></span>
+          </button>
+          <span data-icon="logo" data-size="30"></span>
+          <div>
+            <div class="app-name">Steady</div>
+            <div class="date" id="today-date"></div>
+          </div>
+        </div>
+        <button class="help-btn" data-action="open-help">
+          <span data-icon="help" data-size="18"></span>
+          Get help
+        </button>
+      </header>
+      <nav class="nav" aria-label="Main">
+        <button data-tab="today"><span class="ico" data-icon="today"></span>Today</button>
+        <button data-tab="journal"><span class="ico" data-icon="journal"></span>Journal</button>
+        <button data-tab="progress"><span class="ico" data-icon="progress"></span>Progress</button>
+        <button data-tab="focus"><span class="ico" data-icon="focus"></span>Focus</button>
+      </nav>
+      <div id="screen"></div>
+      <p class="footer-note">
+        <span data-icon="lock" data-size="13"></span>
+        Everything you do in Steady is saved in this browser only.
+      </p>
+    </main>
+
+    <div class="overlay" id="checkin-overlay" role="dialog" aria-modal="true">
+      <div class="sheet" id="checkin-sheet"></div>
+    </div>
+
+    <div class="drawer-backdrop" id="drawer">
+      <aside class="drawer" id="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu"></aside>
+    </div>
+
+    <div class="page-overlay" id="page" role="dialog" aria-modal="true" aria-labelledby="page-title">
+      <div class="page-head">
+        <button class="icon-btn" data-action="close-page" aria-label="Back"><span data-icon="back"></span></button>
+        <h2 id="page-title"></h2>
+      </div>
+      <div class="page-body" id="page-body"></div>
+    </div>
+
+    <div class="overlay" id="help-overlay" role="dialog" aria-modal="true" aria-labelledby="help-title">
+      <div class="sheet">
+        <h2 id="help-title">You don't have to handle this alone</h2>
+        <p>If you're in crisis or thinking about suicide, reach out now. It's free and confidential.</p>
+        <a class="help-link" href="tel:988">
+          <span class="help-ico" data-icon="phone"></span>
+          <span><strong>Call 988</strong><span>Suicide &amp; Crisis Lifeline, 24/7</span></span>
+        </a>
+        <a class="help-link" href="sms:988">
+          <span class="help-ico" data-icon="message"></span>
+          <span><strong>Text 988</strong><span>Chat with a crisis counselor by text</span></span>
+        </a>
+        <a class="help-link" href="https://counselingcenter.illinois.edu/" target="_blank" rel="noopener">
+          <span class="help-ico" data-icon="external"></span>
+          <span><strong>UIUC Counseling Center</strong><span>Free counseling for Illinois students</span></span>
+        </a>
+        <button class="btn secondary" data-action="close-help">Close</button>
+      </div>
+    </div>
+
+    <div class="overlay" id="write-overlay" role="dialog" aria-modal="true" aria-labelledby="write-title">
+      <div class="sheet form">
+        <h2 id="write-title"></h2>
+        <p id="write-prompt"></p>
+        <label for="write-text">Your writing</label>
+        <textarea id="write-text"></textarea>
+        <div class="error" id="write-error"></div>
+        <div class="draft-status" id="write-draft" aria-live="polite"></div>
+        <button class="btn" id="write-save" data-action="save-writing">Save and complete</button>
+        <button class="btn secondary" data-action="close-writing">Close for now</button>
+        <p class="fine-print">
+          Write as much or as little as you like, or leave it blank. Drafts are kept, and anything you save goes to your
+          Journal on this device.
+        </p>
+      </div>
+    </div>
+
+    <div class="wrap-overlay" id="wrap-overlay" role="dialog" aria-modal="true" aria-label="Your day, wrapped">
+      <div class="wrap-bars" id="wrap-bars"></div>
+      <button class="wrap-close" data-action="close-wrap" aria-label="Close">
+        <span data-icon="close" data-size="26"></span>
+      </button>
+      <div class="wrap-slide" id="wrap-slide"></div>
+      <button class="wrap-tap wrap-back" data-action="wrap-back" aria-label="Previous card"></button>
+      <button class="wrap-tap wrap-next" data-action="wrap-next" aria-label="Next card"></button>
+    </div>
+
+    <div class="overlay" id="sheet-overlay" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <div class="sheet" id="sheet-content"></div>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+  </body>
+</html>

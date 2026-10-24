@@ -1,0 +1,14 @@
+{
+  "name": "Steady",
+  "short_name": "Steady",
+  "description": "Small daily steps, planned around how you feel.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#EEF2EC",
+  "theme_color": "#3F6350",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
