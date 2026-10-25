@@ -8,8 +8,8 @@
     <title>Steady</title>
     <link rel="icon" href="./icon.svg" type="image/svg+xml" />
     <link rel="manifest" href="./manifest.webmanifest" />
-    <script type="module" crossorigin src="./assets/index-DKZpmN4z.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Btkrpqjr.css">
+    <script type="module" crossorigin src="./assets/index-C-QuPYSE.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BdfDhEC3.css">
   </head>
   <body>
     <main class="phone">
@@ -37,6 +37,7 @@
       </header>
       <nav class="nav" aria-label="Main">
         <button data-tab="today"><span class="ico" data-icon="today"></span>Today</button>
+        <button data-tab="schedule"><span class="ico" data-icon="schedule"></span>Schedule</button>
         <button data-tab="journal"><span class="ico" data-icon="journal"></span>Journal</button>
         <button data-tab="progress"><span class="ico" data-icon="progress"></span>Progress</button>
         <button data-tab="focus"><span class="ico" data-icon="focus"></span>Focus</button>
@@ -53,7 +54,7 @@
     </div>
 
     <div class="drawer-backdrop" id="drawer">
-      <aside class="drawer" id="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu"></aside>
+      <div class="drawer" id="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu"></div>
     </div>
 
     <div class="page-overlay" id="page" role="dialog" aria-modal="true" aria-labelledby="page-title">
@@ -80,6 +81,7 @@
           <span class="help-ico" data-icon="external"></span>
           <span><strong>UIUC Counseling Center</strong><span>Free counseling for Illinois students</span></span>
         </a>
+        <button class="btn secondary" data-action="open-safety-plan">My safety plan</button>
         <button class="btn secondary" data-action="close-help">Close</button>
       </div>
     </div>
@@ -114,6 +116,8 @@
     <div class="overlay" id="sheet-overlay" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
       <div class="sheet" id="sheet-content"></div>
     </div>
+
+    <div class="tour" id="tour" role="dialog" aria-modal="true" aria-label="Tour of Steady"></div>
 
     <div class="toast" id="toast" role="status"></div>
   </body>
